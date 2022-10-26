@@ -1,0 +1,694 @@
+@font-face {
+    font-family: Raleway-Black;
+    src: url(Fonts/Raleway-Black.ttf);
+}
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(Fonts/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: Raleway-Light;
+    src: url(Fonts/Raleway-Light.ttf);
+}
+@font-face {
+    font-family: Raleway-Regular;
+    src: url(Fonts/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: Raleway-ExtraBold;
+    src: url(Fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Raleway-Medium;
+    src: url(Fonts/Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(Fonts/Raleway-SemiBold.ttf);
+}
+
+@media screen and (min-width:1280px) {
+.container{
+    max-width: 1050px;}
+}
+
+@keyframes main-heading{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+.container{
+    width: 100%;
+    padding: 0px 0px;
+    margin: 0 auto;
+}
+
+:root{
+    --primary-color: #ff4860;
+    --secondary-color: #2b2b2b;
+    --tersary-color: #ffffff;
+    --fourth-color: #efefef;
+
+}
+
+.flex{
+    display: flex;
+}
+
+.justify{
+    justify-content: center;
+}
+
+.justify-l{
+    justify-content: flex-start;
+}
+
+.justify-b{
+    justify-content: space-between;
+}
+
+.align-i{
+    align-items: center;
+}
+
+.align-c{
+    align-content: center;
+}
+
+.justify-text{
+    text-align: justify;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.heading{
+    text-align: center;
+    padding: 3rem 0rem;
+    font-size: 25px;
+}
+
+.products{
+    height: 250px;
+    width: 200px;
+    transition: all .3s ease-in;
+    border-radius: 3px;
+    margin-right: 2rem;
+    margin-bottom: .5rem;
+    box-shadow: 0px 2px 3px rgb(43, 43, 43, .2);
+}
+
+.dproducts{
+    height: 388px;
+    width: 235px;
+    transition: all .3s ease-in;
+    border-radius: 3px;
+    margin-right: 1.3rem;
+    margin-bottom: .5rem;
+    box-shadow: 0px 2px 3px rgb(43, 43, 43, .2);
+}
+
+.product-heading{
+    background: rgb(255, 72, 96, .9);
+    padding: .5rem 1rem;
+    width: 80%;
+    margin: 0px auto;
+    transform: translateY(-53px);
+    color: var(--tersary-color);
+    text-align: center;
+    font-family: raleway-light;
+    font-size: 13px;
+    border-radius: 3px;
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+
+.product-heading:hover{
+    background: rgb(43, 43, 43, .9);
+    transform: translateY(-56px);
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Raleway-Regular;
+    font-size: 15px;
+    --webkit-font-smoothing: antialiased;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn-pri{
+    background: var(--primary-color);
+    color: var(--tersary-color);
+}
+
+.btn-sec{
+    background: var(--secondary-color);
+    color: var(--tersary-color);
+}
+
+.btn-pri:hover{
+    border: 1px solid var(--primary-color);
+    background: none;
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.btn-sec:hover{
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background: none;
+    transform: translateY(-3px);
+}
+
+.btn-pri1{
+    margin-top: .3rem;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-pri1:hover{
+    color: var(--tersary-color);
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.btn-sec1{
+    margin-top: -2rem;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-sec1:hover{
+    color: var(--tersary-color);
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.btn-bg{
+    margin-top: .3rem;
+    border: 1px solid var(--tersary-color);
+    color: var(--tersary-color);
+}
+
+.btn-bg:hover{
+    color: var(--primary-color);
+    background: var(--tersary-color);
+    transform: translateY(-3px);
+}
+
+div.top-bar{
+    background: var(--secondary-color);
+    padding: .3rem 0rem;
+}
+
+div.top-bar .icons a img{
+    margin: 0px .1rem;
+}
+
+div.top-bar .auth a{
+    color: var(--tersary-color);
+    text-decoration: none;
+}
+
+div.top-bar .auth img{
+    margin: 0px .3rem;
+}
+
+div.top-bar .auth span{
+    margin: 0px .5rem;
+    color: var(--tersary-color);
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 0rem;
+}
+
+nav.navigation-bar {
+    background: var(--primary-color);
+}
+
+nav.navigation-bar .container div:last-child a{
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    margin-right: .2rem;
+    color: var(--tersary-color);
+    transition: all .3s ease;
+}
+
+nav.navigation-bar .container div:last-child{
+    margin-right: -1.5rem;
+}
+
+nav.navigation-bar .container div:first-child a{
+    color: var(--tersary-color);
+    text-decoration: none;
+    font-size: 27px;
+}
+
+nav.navigation-bar .container div:first-child a span{
+    font-weight: bold;
+    margin-left: .1rem;
+    font-family: Raleway-Bold;
+}
+
+nav.navigation-bar .container div:last-child a:hover{
+    border: 1px solid var(--tersary-color);
+    border-radius: 3px;
+}
+
+nav.navigation-bar .container div:last-child a.active{
+    background: var(--tersary-color);
+    color: var(--secondary-color);
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+div.hero{
+    background-image: url(images/hero.jpg);
+    height: 87vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div.hero .hero-wrap div{
+    padding-left: 2rem;
+    padding-top: 10rem;
+}
+
+div.hero .hero-wrap div h1{
+    color: var(--secondary-color);
+    width: 60%;
+    font-size: 45px;
+    animation-name: main-heading;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+div.hero .hero-wrap div h1 span{
+    color: var(--primary-color);
+    font-family: raleway-bold;    
+}
+
+div.hero .hero-wrap div p{
+    width: 53%;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+div.hero .hero-wrap div button{
+    margin-top: 1.5rem;
+    margin-right: .5rem;
+}
+
+section.product-category .product-wrapper{
+    margin-right: -2rem;
+}
+
+section.product-category .product-wrapper div img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 3px;
+
+}
+
+section.product-category .product-wrapper div a{
+    text-decoration: none;
+}
+
+section.product-category .container button{
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.latest-product .latest-product-wrapper div img.main-image {
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 230px;
+    border-radius: 3px;
+} 
+
+section.latest-product .latest-product-wrapper .dproducts {
+    border: 1px solid rgba(48, 4, 4, 0.100);
+    padding: .5rem .5rem;
+}
+
+section.latest-product .latest-product-wrapper .dproducts .icons{
+    padding-top: .7rem;
+    padding-bottom: .5rem;
+}
+
+section.latest-product .latest-product-wrapper .dproducts .text p{
+    padding: .4rem 0rem;
+    font-weight: 800;
+}
+
+section.latest-product .latest-product-wrapper{
+    margin-right: -1.3rem;
+}
+
+section.latest-product button.show-more{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.special-offer{
+    margin-top: 2.7rem;
+    background-image: url(images/spcial-offer.jpg);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+}
+
+section.special-offer .container{
+    position: relative;
+}
+
+section.special-offer .container div{
+    position: absolute;
+    top: 11rem;
+    right: 3rem;
+
+}
+
+section.special-offer .wrapper h3{
+    color: var(--tersary-color);
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+section.special-offer .wrapper h2{
+    color: var(--tersary-color);
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-size: 55px;
+}
+
+section.special-offer .wrapper h2 span{
+    font-family: raleway-bold;
+}
+
+section.popular-product .popular-wrapper{
+    margin-right: -2rem;
+}
+
+section.popular-product .popular-wrapper .dproducts {
+    border: 1px solid rgba(48, 4, 4, 0.100);
+    padding: .5rem .5rem;
+    width: 27%;
+}
+
+section.popular-product .popular-wrapper .main-image{
+    height: 250px;
+    width: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+section.popular-product button{
+    margin: .8rem auto;
+}
+
+section.popular-product .popular-wrapper .dproducts .icons{
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+section.popular-product .popular-wrapper .dproducts{
+    height: 414px;
+}
+
+section.popular-product .popular-wrapper .dproducts p{
+    padding-top: .5rem;
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 0rem;
+}
+
+section.popular-product button.popular{
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+}
+
+section.events a{
+    text-decoration: none;
+}
+
+section.events .container .event-wrapper{
+    margin-right: -1.5rem;
+}
+
+section.events .container .event-wrapper .products{
+    margin-right: 1.5rem;
+    width: 21%;
+    height: 270px;
+}
+
+section.events .container .event-wrapper .main-image{
+    height: 270px;
+    width: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+section.events .container button{
+    margin: 1.5rem auto;
+}
+
+section.testimonials{
+    margin-top: 2.5rem;
+    background: var(--fourth-color);
+    width: 100%;
+    height: 460px;
+    padding: 0rem 0rem;
+}
+
+section.testimonials .testimonial-wrapper{
+    margin-right: -1.5rem;
+}
+
+section.testimonials .testimonial-wrapper .testimonial{
+    background: var(--tersary-color);
+    width: 300px;
+    height: 233px;
+    border-radius: 5px;
+    padding: 1.5rem 1.5rem;
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+section.testimonials .testimonial-wrapper .testimonial p{
+    margin-top: .4rem;
+}
+
+section.testimonials .testimonial-wrapper .testimonial .quote{
+    width: 32px;
+    position: absolute;
+    top: -15px;
+
+}
+
+section.testimonials .testimonial-wrapper .testimonial .client-image{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: .7rem;
+}
+
+section.testimonials .testimonial-wrapper .testimonial .icons{
+    margin-right: -.1rem;
+}
+
+section.testimonials .testimonial-wrapper .testimonial .icons img{
+    margin-right: -.1rem;
+    margin-top: .2rem;
+}
+
+section.testimonials .testimonial-wrapper .testimonial .client{
+    margin-top: 1rem;
+}
+
+section.testimonials .container button{
+    margin: 2rem auto;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+section.shipping{
+    padding: 3rem 0rem;
+}
+
+section.shipping .shipping-wrapper div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.shipping .shipping-wrapper img{
+    width: 80px;
+}
+
+section.shipping .shipping-wrapper h3{
+    margin-top: .3rem;
+}
+
+section.shipping .shipping-wrapper p{
+    width: 73%;
+    text-align: center;
+    margin-top: .3rem;
+
+}
+
+footer.footer{
+    background: var(--secondary-color);
+    width: 100%;
+    padding: 3rem 1rem;
+}
+
+footer.footer .footer-wrapper div:first-child a{
+    color: var(--tersary-color);
+    text-decoration: none;
+    font-size: 27px;
+}
+
+footer.footer .footer-wrapper div:first-child a span{
+    font-weight: bold;
+    margin-left: .1rem;
+    color: var(--primary-color);
+    font-family: Raleway-Bold;
+}
+
+footer.footer .footer-wrapper .footer-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer.footer .footer-wrapper div:nth-child(2) div img{
+    width: 12px;
+    height: 12px;
+    object-fit: cover;
+    margin-right: .5rem;
+    margin-top: .2rem;
+}
+
+footer.footer .footer-wrapper div:nth-child(2) div{
+    display: flex;
+    color: var(--fourth-color);
+    padding: .3rem 0rem; 
+}
+
+footer.footer .footer-wrapper div:last-child p{
+    color: var(--fourth-color);
+    width: 90%;
+    margin-bottom: .7rem;
+}
+
+footer.footer .footer-wrapper{
+    padding: 0rem 2rem;
+    margin-right: -2rem;
+}
+
+footer.footer .footer-wrapper .footer{
+    margin-right: 2rem;
+    width: 100%;
+
+}
+
+footer.footer .footer-wrapper div:nth-child(1) h3, footer.footer .footer-wrapper div:nth-child(2) h3, footer.footer .footer-wrapper div:nth-child(3) h3, footer.footer .footer-wrapper div:nth-child(4) h3, footer.footer .footer-wrapper div:nth-child(5) h3{
+    font-size: 18px;
+    font-family: raleway-bold;
+    color: var(--fourth-color);
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+footer.footer .footer-wrapper div:nth-child(3) ul, footer.footer .footer-wrapper div:nth-child(4) ul{
+    list-style-type: none;
+}
+
+footer.footer .footer-wrapper div:nth-child(3) ul li, footer.footer .footer-wrapper div:nth-child(4) ul li{
+    padding: .2rem 0rem;
+    font-size: 14px;
+}
+
+footer.footer .footer-wrapper div:nth-child(3) ul li a, footer.footer .footer-wrapper div:nth-child(4) ul li a{
+    text-decoration: none;
+    color: var(--fourth-color);
+}
+
+footer.footer .footer-wrapper div:nth-child(5) div{
+    margin-top: .5rem;
+    width: 100%;
+}
+
+footer.footer .footer-wrapper div:nth-child(5) div input{
+    height: 38px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .7rem;
+    padding-right: 2rem;
+}
+
+footer.footer .footer-wrapper div:nth-child(5) div span{
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    transform: translateX(-50px);
+    border-radius: 3px;
+    background: var(--primary-color);
+    transition: all .3s ease-in;
+}
+
+footer.footer .footer-wrapper div:nth-child(5) div span:hover{
+    background: var(--secondary-color);
+}
+
+footer.footer .footer-wrapper .footer a:hover{
+    color: var(--primary-color);
+}
+
+.copyright{
+    background: var(--primary-color);
+    padding: .3rem 0rem;
+}
+
+.copyright p{
+    color: var(--tersary-color);
+    text-align: center;
+}
